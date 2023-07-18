@@ -3,27 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Random Card Generator</title>
+
+    <!-- Font Awsome Link -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
+
+    <!-- Head Icon Image -->
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
+
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <!-- Card Properties -->
+    <div class="propiedades">
+      <!-- New Card Button -->
+      <div class="btn-nueva-carta">
+        <button type="button" id="newCard" onclick="newCard()">
+          Nueva Carta
+        </button>
       </div>
+
+      <!-- Card size input boxes -->
+      <div class="inputs">
+        <!-- Card Width -->
+        <div class="card-width">
+          <label for="card-width">width: </label>
+          <input type="text" id="card-width" name="card-width" />
+        </div>
+
+        <!-- Card height -->
+        <div class="card-height">
+          <label for="card-height">height: </label>
+          <input type="text" id="card-height" name="card-height" />
+        </div>
+
+        <!-- Submit button from size controllers -->
+        <input type="submit" value="Submit" id="bntSubmit" />
+      </div>
+    </div>
+
+    <!-- Game card -->
+    <div class="card">
+      <div class="figura"></div>
+      <div class="valor"></div>
+      <div class="figura invertida"></div>
     </div>
   </body>
 </html>
